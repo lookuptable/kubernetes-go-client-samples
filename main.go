@@ -5,24 +5,15 @@ import (
 	"fmt"
 	"time"
 
-	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/pkg/api/v1"
-	"k8s.io/client-go/tools/clientcmd"
-)
+	"github.com/lookuptable/client-go-example/client"
 
-var (
-	kubeconfig = flag.String("kubeconfig", "./config", "absolute path to kubeconfig file")
+	"k8s.io/client-go/pkg/api/v1"
 )
 
 func main() {
 	flag.Parse()
 
-	config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
-	if err != nil {
-		panic(err.Error())
-	}
-
-	clientset, err := kubernetes.NewForConfig(config)
+	clientset, err := client.NewClientSet()
 	if err != nil {
 		panic(err.Error())
 	}
