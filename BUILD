@@ -6,8 +6,7 @@ go_binary(
     name = "main",
     srcs = ["main.go"],
     deps = [
-        "@io_k8s_client_go//kubernetes:go_default_library",
+        "//client:go_default_library",
         "@io_k8s_client_go//pkg/api/v1:go_default_library",
-        "@io_k8s_client_go//tools/clientcmd:go_default_library",
     ],
 )
