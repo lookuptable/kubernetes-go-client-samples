@@ -1,0 +1,8 @@
+package: github.com/lookuptable/client-go-example
+import:
+- package: k8s.io/client-go
+  version: v2.0.0-alpha.1
+  subpackages:
+  - kubernetes
+  - pkg/api/v1
+  - tools/clientcmd
