@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/lookuptable/client-go-example/client"
+	"github.com/lookuptable/kubernetes-go-client-samples/client"
 
 	"k8s.io/client-go/pkg/api/v1"
 )
