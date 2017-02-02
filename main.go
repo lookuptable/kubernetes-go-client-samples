@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"time"
 
@@ -11,8 +10,6 @@ import (
 )
 
 func main() {
-	flag.Parse()
-
 	clientset, err := client.NewClientSet()
 	if err != nil {
 		panic(err.Error())

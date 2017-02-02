@@ -12,6 +12,8 @@ var (
 )
 
 func NewClientSet() (*kubernetes.Clientset, error) {
+	flag.Parse()
+
 	config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
 	if err != nil {
 		return nil, err
