@@ -1,4 +1,4 @@
-package: github.com/lookuptable/client-go-example
+package: github.com/lookuptable/kubernetes-go-client-samples
 import:
 - package: k8s.io/client-go
   version: v2.0.0-alpha.1
